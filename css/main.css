@@ -1,0 +1,112 @@
+body{
+    margin: unset;
+    border: unset;
+    font-family:Ubuntu, Arial, Helvetica,sans-serif;
+    font-size:16px;
+    font-weight:400;
+    padding:0;
+}
+
+.map{
+    width:100%;
+    height: auto;
+}
+
+article{
+    width: 90%;
+    margin: auto;
+    position: relative;
+}
+
+.div_list{
+    width:auto;
+    height:280px;
+    overflow-y:scroll;
+    padding:4px;
+    border:2px dashed #aaa;
+}
+
+.div_list ul{
+    margin:0;
+    padding:0;
+    border:1px solid red;
+    list-style:none;
+}
+
+.div_list ul li{
+    border-bottom: 1px solid #D4D4D4;
+    padding-top: 5px;
+    height: 60px;
+    line-height: 60px;
+}
+
+.div_list ul li .li_cell{
+    width: 50px;
+    vertical-align:middle;
+}
+.div_list ul li .li_right{
+    vertical-align:middle;
+    padding-left: 10%;
+}
+
+.div_list ul li span{
+    padding-left: 10%;
+    vertical-align:middle;
+    height: auto;
+    width: 150px;
+    display:inline-block;
+}
+
+.div_city{
+    margin: 10px;
+    text-align: left;
+}
+/*弹出层样式-显示*/
+.asideShow{
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    background-color: snow;
+    top: 0px;
+    left: 0px;
+}
+/*弹出层样式-隐藏*/
+.asideClose{
+    position: absolute;
+    display: none;
+    overflow: hidden;
+    background-color: snow;
+    top: 0px;
+    left: 0px;
+}
+
+.popupcontent{
+    width: 90%;
+    margin: auto;
+}
+.bar{
+    width: 340px;
+    height: 30px;
+    background-image: url("../img/bardb.png");
+    background-size:100% 100%;
+    margin-top: 10px;
+    vertical-align:middle;
+}
+p{
+    text-align: justify;
+}
+
+#up img{
+    position:fixed ;
+    top: 82%;
+    left: 85%;
+    width: 40px;
+    height: 40px;
+}
+#back img{
+    position:fixed ;
+    top: 90%;
+    left: 85%;
+    width: 40px;
+    height: 40px;
+}

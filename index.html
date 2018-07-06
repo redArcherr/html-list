@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv = "X-UA-Compatible" content = "IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="Description" content=""/>
+    <meta name="keywords" content=""/>
+    <title>内蒙古导览</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/jQuery.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="js/datacsv.js"></script>
+    <script>
+        var id,citydata=[],itemdata=[];//城市，城市csv，资源csv
+        window.onload=function(){
+            id=GetQueryString("id");//接收到的id
+            if(id!=null&&id>=0&&id<=11){
+                csvCity();csvItem();
+                setTimeout("console.log(citydata)","100");
+                setTimeout("console.log(itemdata)","100");
+            }else{
+                console.log("无此城市id");
+            }
+        }
+    </script>
+</head>
+<body>
+<header>
+    <img id="map" class="map" src="img/map0.png">
+</header>
+<article>
+    <div class="div_city">
+        <span>城市名称:</span><span id="cityName">呼伦贝尔市</span>
+    </div>
+    <div class="div_list">
+        <ul id="list">
+            <li><img class="li_cell" src="img/cu.png"><span>铜</span><img class="li_right" src="img/btn.png"></li>
+            <li><img class="li_cell" src="img/cu.png"><span>铜</span><img class="li_right" src="img/btn.png"></li>
+            <li><img class="li_cell" src="img/cu.png"><span>铜</span><img class="li_right" src="img/btn.png"></li>
+            <li><img class="li_cell" src="img/cu.png"><span>铜</span><img class="li_right" src="img/btn.png"></li>
+            <li><img class="li_cell" src="img/cu.png"><span>铜</span><img class="li_right" src="img/btn.png"></li>
+            <li><img class="li_cell" src="img/cu.png"><span>铜</span><img class="li_right" src="img/btn.png"></li>
+            <li><img class="li_cell" src="img/cu.png"><span>铜</span><img class="li_right" src="img/btn.png"></li>
+        </ul>
+    </div>
+</article>
+
+<aside id="aside" class="asideClose">
+ <div><img id="itemimg" class="map" src="img/cud.png"></div>
+    <div class="popupcontent">
+        <div class="bar">&nbsp;&nbsp;&nbsp;&nbsp;储量</div>
+        <p id="itemYield">1、11铜在工业上有着广泛的用途，包括电气行业、机械制造、交通、建筑等方面。目前，铜在电气和电子行业这一领域中主要用于制造电线、通讯电缆和其他成品如电动机、发电机转子及电子仪器、仪表等，这部分用量约占工业总需求量的一半左右。铜及铜合金在计算机芯片、集成电路、晶体管、印刷电路版等器材器件中都占有重要地位。
+2、随着科学技术的日新跃益，铜的应用范围在拓宽，铜在医学、生物、超导及环境方面开始发挥作用。如，当聚氨酯塑料泡沫含有铜或氧化铜时，能大大减少这种塑料燃烧时所释放出致命的有毒气体－氢氰化物(HCN)。大量研究资料证明，铜的杀菌作用可以有效地降低肺炎病菌的传播，能抑制细菌生长，保持饮用水清洁卫生，所以，未来国内建筑业铜管的发展前景将十分广阔。</p>
+        <div class="bar">&nbsp;&nbsp;&nbsp;&nbsp;应用</div>
+        <p id="itemUse">1、铜在工业上有着广泛的用途，包括电气行业、机械制造、交通、建筑等方面。目前，铜在电气和电子行业这一领域中主要用于制造电线、通讯电缆和其他成品如电动机、发电机转子及电子仪器、仪表等，这部分用量约占工业总需求量的一半左右。铜及铜合金在计算机芯片、集成电路、晶体管、印刷电路版等器材器件中都占有重要地位。
+            2、随着科学技术的日新跃益，铜的应用范围在拓宽，铜在医学、生物、超导及环境方面开始发挥作用。如，当聚氨酯塑料泡沫含有铜或氧化铜时，能大大减少这种塑料燃烧时所释放出致命的有毒气体－氢氰化物(HCN)。大量研究资料证明，铜的杀菌作用可以有效地降低肺炎病菌的传播，能抑制细菌生长，保持饮用水清洁卫生，所以，未来国内建筑业铜管的发展前景将十分广阔。</p>
+    </div>
+    <div id="up"><img src="img/回到顶部.png"></div>
+    <div id="back"><img src="img/返回上级.png"></div>
+</aside>
+
+</body>
+</html>
